@@ -16,13 +16,14 @@ import com.nostra13.universalimageloader.core.assist.QueueProcessingType;
 
 import java.util.ArrayList;
 
-public class SecondActivity extends AppCompatActivity implements ViewPager.OnPageChangeListener {
+public class MainActivity extends AppCompatActivity implements ViewPager.OnPageChangeListener {
     private AutoPlayViewPager autoPlayViewPage;
     private String[]        images = {"http://img2.3lian.com/2014/c7/12/d/76.jpg",
             "http://img2.3lian.com/2014/c7/12/d/77.jpg",
             "http://img2.3lian.com/2014/c7/12/d/78.jpg",
             "http://img2.3lian.com/2014/c7/12/d/79.jpg",
             "http://img2.3lian.com/2014/c7/12/d/80.jpg",
+            "http://img2.3lian.com/2014/c7/12/d/81.jpg"
     };
     private ArrayList<String> views  = new ArrayList<>();
     View view1, view2, view3, view4, view5;
@@ -32,7 +33,7 @@ public class SecondActivity extends AppCompatActivity implements ViewPager.OnPag
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_second);
+        setContentView(R.layout.activity_main);
         BannerAdapter bannerAdapter = new BannerAdapter(this);
 //        view1 = findViewById(R.id.view1);
 //        view2 = findViewById(R.id.view2);
@@ -63,7 +64,7 @@ public class SecondActivity extends AppCompatActivity implements ViewPager.OnPag
         autoPlayViewPage = (AutoPlayViewPager) findViewById(R.id.view_pager);
         autoPlayViewPage.setAdapter(bannerAdapter);
         autoPlayViewPage.setDirection(AutoPlayViewPager.Direction.LEFT);// 设置播放方向
-        autoPlayViewPage.setCurrentItem(200); // 设置每个Item展示的时间
+        autoPlayViewPage.setCurrentItem(2520);
         autoPlayViewPage.start(); // 开始轮播
         autoPlayViewPage.setOnPageChangeListener(this);
     }
